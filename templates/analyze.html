@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Analizar Datos – DataBridge{% endblock %}
+
+{% block content %}
+
+<main class="analyze-page">
+    <h2>Analiza tus datos</h2>
+    <p class="text-muted">Suba su archivo CSV para obtener un resumen estadístico y validar la calidad de sus datos.</p>
+
+    <div class="upload-container">
+        <input type="file" id="fileInput" accept=".csv" class="hidden-input">
+
+        <div class="file-action-group">
+            <label for="fileInput" class="btn btn-secondary">
+                Elegir archivo
+            </label>
+            <span id="file-name-display" class="file-display-text">Ningún archivo seleccionado.</span>
+        </div>
+
+        <button id="analyzeBtn" class="btn btn-primary action-cta">Analizar datos</button>
+    </div>
+
+    <div id="output" class="output-box">
+        <p class="text-muted">Aún no hay datos cargados...</p>
+        </div>
+
+</main>
+
+{% endblock %}

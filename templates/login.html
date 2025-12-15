@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Iniciar Sesión – DataBridge IA{% endblock %}
+
+{% block content %}
+
+<section class="login-page">
+    <div class="login-container feature-card">
+        <h2 style="text-align: center;">Acceso de <span>Usuario</span></h2>
+        <p class="text-muted" style="text-align: center; margin-bottom: 2rem;">Acceda a su cuenta para continuar con sus análisis.</p>
+
+        <form class="login-form">
+            <label for="username" class="form-label">Usuario</label>
+            <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required class="form-input">
+
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required class="form-input">
+
+            <!-- Usamos la clase btn-primary (el botón principal oscuro) -->
+            <button type="button" class="btn btn-primary btn-full-width">Ingresar</button>
+        </form>
+
+        <p class="note text-warning">
+            Esta función está en desarrollo. Actualmente, el inicio de sesión no está habilitado.
+        </p>
+    </div>
+</section>
+
+{% endblock %}

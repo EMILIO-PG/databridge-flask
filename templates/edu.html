@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}DataBridge Edu – DataBridge IA{% endblock %} {# Título actualizado #}
+
+{% block content %}
+
+<section class="page-intro">
+    <h2><span>DataBridge Edu</span></h2> {# Título actualizado #}
+    <p class="text-muted">Bienvenido a la sección educativa de DataBridge IA. Explore conceptos esenciales de estadística descriptiva y análisis de datos presentados de forma interactiva y profesional.</p> {# Subtítulo actualizado #}
+</section>
+
+<section class="definitions-section">
+    {# ELIMINADO: <h3 class="section-heading">Conceptos Fundamentales de Análisis de Datos</h3> #}
+
+    <div class="carousel-container">
+        <!-- Flecha de navegación izquierda -->
+        <button class="carousel-nav-arrow prev-arrow" aria-label="Anterior">
+            <i class="fa-solid fa-chevron-left"></i> {# Icono de Font Awesome #}
+        </button>
+
+        <div class="carousel-slides-wrapper">
+            <!-- NUEVO PRIMER SLIDE: Introducción y Logo -->
+            <div class="carousel-slide" data-slide-id="0">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="DataBridge IA Logo"> {# Logo como imagen #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Conceptos Fundamentales de Análisis de Datos</h4> {# Título del primer slide #}
+                        <p>Descubra las bases de la estadística descriptiva y cómo aplicarlas para comprender mejor la información de su negocio con DataBridge IA. Navegue por los conceptos clave usando las flechas o los puntos de abajo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 1: Histograma -->
+            <div class="carousel-slide" data-slide-id="1">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/edu/hist.png') }}" alt="Ilustración de Histograma"> {# Nombre de archivo corregido #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Histograma</h4>
+                        <p>Es una representación gráfica que muestra la distribución de frecuencias de un conjunto de datos. Utiliza barras continuas que representan intervalos o rangos de valores, permitiendo visualizar la forma y dispersión de la muestra.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Media Aritmética (Promedio) -->
+            <div class="carousel-slide" data-slide-id="2">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/edu/mean.png') }}" alt="Ilustración de Media Aritmética"> {# Nombre de archivo corregido #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Media Aritmética (Promedio)</h4>
+                        <p>Es la medida de tendencia central más común. Se calcula sumando todos los datos en un conjunto y dividiendo el resultado entre el número total de observaciones. Es sensible a los valores atípicos (outliers).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Mediana -->
+            <div class="carousel-slide" data-slide-id="3">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/edu/medium.png') }}" alt="Ilustración de Mediana"> {# Nombre de archivo corregido #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Mediana</h4>
+                        <p>Es el valor que ocupa la posición central en un conjunto de datos que ha sido previamente ordenado. Su función es dividir la muestra en dos mitades iguales, y es menos sensible a los valores atípicos que la media.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Moda -->
+            <div class="carousel-slide" data-slide-id="4">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/edu/moda.png') }}" alt="Ilustración de Moda"> {# Nombre de archivo corregido #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Moda</h4>
+                        <p>Es el valor o categoría que ocurre con mayor frecuencia en un conjunto de datos. Un conjunto puede ser unimodal, bimodal, multimodal o no tener moda si todos los valores son diferentes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Varianza y Desviación Estándar -->
+            <div class="carousel-slide" data-slide-id="5">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/edu/desvar.png') }}" alt="Ilustración de Varianza y Desviación Estándar"> {# Nombre de archivo corregido #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Varianza y Desviación Estándar</h4>
+                        <p>La **Varianza** mide cuánto se alejan los datos de la media, siendo el promedio de las diferencias al cuadrado entre cada valor y la media. Cuanto mayor sea la varianza, mayor la dispersión. La **Desviación Estándar** es la raíz cuadrada de la varianza, representando la cantidad promedio de dispersión de los datos alrededor de la media, expresada en las mismas unidades que los datos originales, lo que facilita su interpretación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Gráfico de Dispersión (Scatter Plot) -->
+            <div class="carousel-slide" data-slide-id="6">
+                <div class="carousel-slide-content">
+                    <div class="carousel-image-box">
+                        <img src="{{ url_for('static', filename='img/edu/disper.png') }}" alt="Ilustración de Gráfico de Dispersión"> {# Nombre de archivo corregido #}
+                    </div>
+                    <div class="carousel-text-box">
+                        <h4>Gráfico de Dispersión (Scatter Plot)</h4>
+                        <p>Es una representación visual utilizada para mostrar la relación (correlación) entre dos variables numéricas. Cada punto en el gráfico representa una observación, ayudando a identificar tendencias y patrones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flecha de navegación derecha -->
+        <button class="carousel-nav-arrow next-arrow" aria-label="Siguiente">
+            <i class="fa-solid fa-chevron-right"></i> {# Icono de Font Awesome #}
+        </button>
+
+        <!-- Puntos de paginación -->
+        <div class="carousel-pagination-dots">
+            <span class="dot" data-slide-index="0"></span> {# Punto para el nuevo slide intro #}
+            <span class="dot" data-slide-index="1"></span>
+            <span class="dot" data-slide-index="2"></span>
+            <span class="dot" data-slide-index="3"></span>
+            <span class="dot" data-slide-index="4"></span>
+            <span class="dot" data-slide-index="5"></span>
+            <span class="dot" data-slide-index="6"></span>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}DataBridge IA - Inicio{% endblock %}
+
+{% block content %}
+
+<!-- Sección Principal Hero - Inspira el diseño oscuro y audaz -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h2>Convierte tus datos en conocimiento con inteligencia artificial</h2>
+        <p>Sube sus archivos, deje que nuestra IA los interprete y obtenga resultados automáticos y comprensibles.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('analyze_page') }}" class="btn btn-primary">Analiza tus datos ahora</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Características - Ahora usa "tarjetas" sobre el fondo oscuro -->
+<section class="features-section">
+    <h2>¿Por qué elegir <span>DataBridge IA</span>?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Análisis Inteligente al Instante</h3>
+            <p>Nuestra plataforma procesa sus archivos CSV en segundos. Identifica tipos de datos, detecta valores atípicos y prepara un resumen estadístico completo sin intervención manual.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Visualización Clara y Efectiva</h3>
+            <p>Olvídese de las hojas de cálculo complejas. Generamos automáticamente histogramas, gráficos de dispersión y tablas de correlación para que pueda entender sus datos de un vistazo.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Enfocado en la Privacidad</h3>
+            <p>Sus datos son suyos. No almacenamos sus archivos después del análisis. Todo el procesamiento se realiza en memoria y se descarta de forma segura una vez que cierra la sesión.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título DINÁMICO para cada página -->
+    <title>{% block title %}DataBridge IA{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo.png') }}">
+
+    <!-- Fuente Google Fonts: Inter para un look moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Integración de Font Awesome para iconos formales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR SUPERIOR (UNIFORME EN TODO EL SITIO) -->
+    <header class="navbar">
+        <div class="nav-left">
+            <!-- LOGO: SIEMPRE ES UN ENLACE A INICIO -->
+            <a href="{{ url_for('home') }}" class="logo-link">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="DataBridge Logo" class="logo">
+                <h1>DataBridge <span>IA</span></h1>
+            </a>
+        </div>
+
+        <nav class="nav-right">
+            <!-- Los enlaces 'activos' se basan en el 'active_page' de Flask. -->
+            <a href="{{ url_for('home') }}" class="nav-item {% if active_page == 'home' %}active{% endif %}">Inicio</a>
+            <a href="{{ url_for('analyze_page') }}" class="nav-item {% if active_page == 'analyze' %}active{% endif %}">Analiza tus datos</a>
+            <a href="{{ url_for('quienes') }}" class="nav-item {% if active_page == 'quienes' %}active{% endif %}">Quiénes somos</a>
+            <a href="{{ url_for('edu') }}" class="nav-item {% if active_page == 'edu' %}active{% endif %}">DataBridge Edu</a> {# NOMBRE CORREGIDO #}
+            <a href="{{ url_for('soporte') }}" class="nav-item {% if active_page == 'soporte' %}active{% endif %}">Soporte</a>
+            <a href="{{ url_for('login') }}" class="btn btn-primary-outline {% if active_page == 'login' %}active{% endif %}">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DINÁMICO -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER (UNIFORME EN TODO EL SITIO) -->
+    <footer class="footer">
+        <p>© 2025 DataBridge – Proyecto ESPOL</p>
+    </footer>
+
+    <!-- Script principal de JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

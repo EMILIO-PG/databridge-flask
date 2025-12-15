@@ -1,0 +1,808 @@
+/* 🎨 DataBridge - Hoja de estilo MASTER (Sin IA + Dashboard Auto) */
+/* Paleta: Fondo #00001a | Tarjetas #0c0c22 | Bordes #1a1a33 | Acento #0056b3 | Dorado #D4AF37 */
+
+/* =========================================
+   1. CONFIGURACIÓN BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    background-color: #00001a;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    font-size: 15px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+/* Títulos Generales */
+h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+h2 span {
+    color: #0056b3;
+    display: inline-block;
+}
+
+.text-muted {
+    color: #a0a8b7;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================================
+   2. NAVBAR & FOOTER
+   ========================================= */
+header.navbar {
+    width: 100%;
+    background-color: #00001a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1a1a33;
+}
+
+.nav-left .logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    height: 30px;
+    width: auto;
+    margin-right: 8px;
+}
+
+.nav-left h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+.nav-left h1 span {
+    color: #0056b3;
+}
+
+nav.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+nav.nav-right a.nav-item {
+    color: #a0a8b7;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+nav.nav-right a.nav-item:hover,
+nav.nav-right a.nav-item.active {
+    color: #0056b3;
+}
+
+nav.nav-right a.nav-item.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #0056b3;
+    bottom: -6px;
+    left: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #00001a;
+    color: #a0a8b7;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    border-top: 1px solid #1a1a33;
+}
+
+/* =========================================
+   3. BOTONES (UI KIT)
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: #e0e0e0;
+    border: 2px solid #0056b3;
+}
+
+.btn-primary:hover {
+    background-color: #003d7a;
+    border-color: #003d7a;
+}
+
+.btn-primary-outline {
+    padding: 7px 16px;
+    border: 1px solid #0056b3;
+    background: transparent;
+    color: #0056b3;
+    border-radius: 20px;
+}
+
+.btn-primary-outline:hover {
+    background-color: #0056b3;
+    color: #e0e0e0;
+}
+
+.btn-secondary,
+.btn-secondary-outline {
+    padding: 10px 20px;
+    background-color: #1a1a33;
+    color: #e0e0e0;
+    border: 1px solid #32314e;
+    border-radius: 6px;
+}
+
+.btn-secondary:hover {
+    background-color: #21213b;
+}
+
+/* =========================================
+   4. HOME PAGE (HERO & FEATURES)
+   ========================================= */
+.hero-section {
+    text-align: center;
+    padding: 5rem 1.5rem 3rem;
+    background: radial-gradient(circle at top, rgba(12, 12, 34, 0.5) 0%, rgba(0, 0, 26, 1) 70%);
+}
+
+.hero-section h2 {
+    font-size: 2.8rem;
+    max-width: 800px;
+    margin: 0 auto 1.2rem;
+    line-height: 1.1;
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 1.2rem auto 2rem;
+    color: #a0a8b7;
+}
+
+.features-section {
+    padding: 3rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.feature-card {
+    background: #0c0c22;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1a1a33;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    color: #0056b3;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: #a0a8b7;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   5. ANALYZE PAGE (UPLOAD & OUTPUT)
+   ========================================= */
+.analyze-page {
+    max-width: 950px;
+    margin-top: 2rem;
+}
+
+.upload-container {
+    background: #0c0c22;
+    border: 1px solid #1a1a33;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2.5rem auto;
+    max-width: 550px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.hidden-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.file-action-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.file-display-text {
+    color: #a0a8b7;
+    font-size: 0.95rem;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.action-cta {
+    padding: 0.9rem 2.2rem;
+    font-size: 1.05rem;
+    border-radius: 30px;
+}
+
+/* --- NUEVO: Estilos del Dashboard Automático --- */
+.output-box {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: #0c0c22;
+    border-radius: 12px;
+    border: 1px solid #1a1a33;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h3 {
+    color: #0056b3;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid de Tarjetas KPI */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    background: #00001a;
+    border: 1px solid #1a1a33;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    border-color: #0056b3;
+}
+
+.kpi-card i {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #0056b3;
+}
+
+.kpi-card h4 {
+    font-size: 0.85rem;
+    color: #a0a8b7;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.kpi-card .value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #e0e0e0;
+}
+
+.kpi-card .value.small {
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.kpi-card .sub-text {
+    font-size: 0.8rem;
+    color: #a0a8b7;
+    margin-top: 5px;
+}
+
+/* KPI Destacado */
+.kpi-card.highlight {
+    border-color: #0056b3;
+    background: linear-gradient(180deg, #0c0c22 0%, #001a33 100%);
+}
+
+.kpi-card.highlight i {
+    color: #D4AF37; /* Dorado */
+}
+
+/* Lista dentro de tarjeta KPI */
+.kpi-card.list-card {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.kpi-list {
+    list-style: none;
+    width: 100%;
+}
+
+.kpi-list li {
+    font-size: 0.9rem;
+    color: #a0a8b7;
+    border-bottom: 1px solid #1a1a33;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kpi-list li:last-child {
+    border-bottom: none;
+}
+
+.kpi-list li strong {
+    color: #e0e0e0;
+}
+
+.separator {
+    border: 0;
+    border-top: 1px dashed #1a1a33;
+    margin: 2rem 0;
+}
+
+.text-danger { color: #ef4444 !important; }
+.text-success { color: #22c55e !important; }
+
+/* --- Resumen Técnico (Tablas y Listas) --- */
+.summary-card {
+    background: #00001a;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    border: 1px solid #1a1a33;
+}
+
+.summary-card h4 {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    margin-bottom: 0.8rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #1a1a33;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #1a1a33;
+    color: #e0e0e0;
+}
+
+table th {
+    background-color: #0056b3;
+    color: #e0e0e0;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #0c0c22;
+}
+
+.summary-action-bar {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+/* Mensajes de Estado */
+.status-box {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    border-left: 5px solid;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.status-box.loading { color: #0056b3; background: #0c0c22; border-left-color: #0056b3; }
+.status-box.error { color: #ef4444; background: #0c0c22; border-left-color: #ef4444; }
+.status-box.success { color: #22c55e; background: #0c0c22; border-left-color: #22c55e; }
+.status-box.info { color: #a0a8b7; background: #0c0c22; border-left-color: #a0a8b7; }
+
+
+/* =========================================
+   6. PÁGINAS DE CONTENIDO (Soporte, Quiénes, Edu)
+   ========================================= */
+.page-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+}
+
+.page-intro h2 {
+    font-size: 2rem;
+}
+
+.qa-section, .definitions-section, .guide-section, .contact-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+}
+
+.qa-item, .definition, .feature-card.disclaimer-card, .contact-item {
+    background: #0c0c22;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #1a1a33;
+}
+
+.qa-item h3, .definition h4, .feature-card.disclaimer-card h3, .contact-item h4 {
+    color: #0056b3;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.qa-item p, .definition p, .feature-card.disclaimer-card p, .contact-item p,
+.contact-item ul li, .list-support li {
+    color: #a0a8b7;
+    font-size: 0.95rem;
+}
+
+.qa-item ul, .list-support {
+    padding-left: 1.2rem;
+    list-style-type: none;
+    margin-top: 0.8rem;
+}
+
+.list-support li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.list-support li.check i { color: #22c55e; }
+.list-support li.info i { color: #0056b3; }
+.list-support li.warning i { color: #fbbf24; }
+
+.section-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #1a1a33;
+}
+
+.contact-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item .contact-detail {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+   7. LOGIN PAGE
+   ========================================= */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+}
+
+.login-container {
+    max-width: 400px;
+    width: 90%;
+    background: #0c0c22;
+    border: 1px solid #1a1a33;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #1a1a33;
+    border-radius: 6px;
+    background-color: #00001a;
+    color: #e0e0e0;
+    outline: none;
+    transition: border-color 0.2s;
+    font-size: 0.95rem;
+}
+
+.login-form input:focus {
+    border-color: #0056b3;
+}
+
+.login-form button {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.login-container .note {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #a0a8b7;
+}
+
+/* =========================================
+   8. CARRUSEL (Edu.html)
+   ========================================= */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #0c0c22;
+    padding: 1.5rem;
+    border: 1px solid #1a1a33;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-slides-wrapper {
+    display: flex;
+    height: 450px; /* Altura ajustada */
+    position: relative;
+}
+
+.carousel-slide {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #00001a;
+    border-radius: 8px;
+    height: 100%;
+    border: 1px solid #1a1a33;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: flex;
+    opacity: 1;
+}
+
+.carousel-slide-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.carousel-image-box {
+    flex: 0 0 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a33;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.carousel-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.carousel-text-box {
+    flex: 1;
+    color: #e0e0e0;
+    padding: 0.5rem;
+}
+
+.carousel-text-box h4 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 0.8rem;
+}
+
+.carousel-text-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #a0a8b7;
+}
+
+.carousel-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(12,12,34,0.7);
+    color: #e0e0e0;
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.carousel-nav-arrow:hover { background-color: rgba(0, 86, 179, 0.8); }
+
+.prev-arrow { left: 10px; }
+.next-arrow { right: 10px; }
+
+.carousel-pagination-dots {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background: #1a1a33;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #32314e;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+/* =========================================
+   9. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 900px) {
+    header.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem 1rem;
+    }
+    .nav-left { width: 100%; justify-content: center; margin-bottom: 0.5rem; }
+    nav.nav-right { flex-direction: column; align-items: center; gap: 0.8rem; width: 100%; border-top: 1px solid #1a1a33; padding-top: 0.5rem; }
+    nav.nav-right a.nav-item { width: 100%; text-align: center; padding: 3px 0; }
+    
+    .dashboard-grid { grid-template-columns: 1fr 1fr; }
+    
+    /* Carrusel Responsive */
+    .carousel-slides-wrapper { height: auto; min-height: 400px; }
+    .carousel-slide-content { flex-direction: column; text-align: center; }
+    .carousel-image-box { width: 100%; max-height: 200px; margin-bottom: 1rem; flex: none; }
+    .carousel-text-box h4 { font-size: 1.3rem; }
+}
+
+@media (max-width: 600px) {
+    body { font-size: 14px; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    h2 { font-size: 1.8rem; }
+    .hero-section h2 { font-size: 2rem; }
+    .feature-card { padding: 1.5rem; }
+    
+    .carousel-nav-arrow { font-size: 1rem; padding: 0.6rem 0.8rem; }
+    .carousel-image-box { max-height: 150px; }
+}

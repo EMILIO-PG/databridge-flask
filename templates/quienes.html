@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Quiénes Somos – DataBridge IA{% endblock %}
+
+{% block content %}
+
+<section class="page-intro">
+    <h2>Quiénes somos en <span>DataBridge IA</span></h2>
+    <p class="text-muted">DataBridge es un proyecto académico con enfoque social, desarrollado para democratizar el análisis de datos y fortalecer la toma de decisiones en pequeñas empresas.</p>
+</section>
+
+<!-- Sección de Preguntas y Respuestas (QA) - Usa tarjetas con sombra suave -->
+<section class="qa-section">
+    <div class="feature-card qa-item">
+        <h3>¿Cuál es el desafío que impulsa a DataBridge?</h3>
+        <p>El impulso de DataBridge nace de una brecha crítica que observamos en las pequeñas y medianas empresas (PYMES): aunque generan valiosa información digital a través de sus sistemas de facturación electrónica, la mayoría carece de herramientas accesibles para organizar, estructurar o analizar dichos datos. Esta limitación provoca que la toma de decisiones se base con frecuencia en la intuición más que en la evidencia, reduciendo la eficiencia y la competitividad empresarial. Identificamos una necesidad urgente de cerrar la brecha entre la disponibilidad de datos y la capacidad de transformarlos en conocimiento útil para la planificación y el control operativo.</p>
+    </div>
+
+    <div class="feature-card qa-item">
+        <h3>¿Cómo transformamos datos en decisiones?</h3>
+        <p>Nuestra respuesta es DataBridge, una plataforma web y aplicación móvil de análisis inteligente de datos. Está diseñada específicamente para que pequeñas empresas formalizadas puedan cargar sus archivos digitales (como CSV) generados por sus sistemas de facturación. Mediante algoritmos de inteligencia artificial, el sistema procesa la información y genera automáticamente reportes visuales, interpretaciones estadísticas y recomendaciones personalizadas. El propósito de esta solución es democratizar el acceso al análisis de datos empresariales, permitiendo que cualquier negocio convierta sus registros en conocimiento accionable sin necesidad de contar con especialistas en analítica o programación.</p>
+    </div>
+
+    <div class="feature-card qa-item">
+        <h3>¿Para quiénes está diseñada nuestra plataforma?</h3>
+        <p>Trabajamos para los dueños, administradores y contadores de pequeñas empresas formalizadas que, a pesar de generar información digital, no tienen cómo aprovecharla. Entendemos sus frustraciones diarias:</p>
+        <ul class="list-styled"> {# Utiliza una lista con viñetas #}
+            <li><strong>Dueños de negocios:</strong> Necesitan unificar información dispersa (ventas, inventario) para dejar de depender de hojas de cálculo manuales y tomar decisiones basadas en datos reales.</li>
+            <li><strong>Administradores:</strong> Requieren reportes claros de rentabilidad y control de stock, sin necesidad de tener conocimientos técnicos avanzados.</li>
+            <li><strong>Contadores y asistentes administrativos:</strong> Buscan automatizar la consolidación de datos desde múltiples formatos para reducir drásticamente los errores manuales, las duplicaciones y la pérdida de tiempo.</li>
+        </ul>
+    </div>
+
+    <div class="feature-card qa-item">
+        <h3>¿Cuál es nuestro impacto esperado?</h3>
+        <p>Nuestro impacto se mide en la transformación real de la gestión empresarial. La propuesta de valor de DataBridge radica en convertir datos de facturación electrónica en información accionable. A nivel funcional, buscamos un impacto cuantificable: aspiramos a una reducción del tiempo de análisis de datos de entre un 60% y 70% en comparación con el trabajo manual, y una disminución de duplicaciones y errores de transcripción de hasta un 80% para el personal administrativo. A nivel emocional, queremos brindar confianza y tranquilidad a los dueños de negocios, permitiéndoles tomar decisiones estratégicas con respaldo. A largo plazo, al facilitar reportes inteligentes y visuales, buscamos elevar la credibilidad y fortalecer la reputación profesional del negocio.</p>
+    </div>
+</section>
+
+{% endblock %}

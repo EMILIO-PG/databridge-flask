@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Soporte – DataBridge IA{% endblock %}
+
+{% block content %}
+
+<section class="page-intro">
+    <h2>Centro de <span>Soporte y Guías</span></h2>
+    <p class="text-muted">Aquí encontrará una guía rápida para el uso de la plataforma. Si tiene inconvenientes, por favor, revise las secciones a continuación.</p>
+</section>
+
+<!-- Guía de Uso y Preguntas Frecuentes -->
+<section class="guide-section">
+    <div class="feature-card">
+        <h3>Guía Rápida de Uso</h3>
+        <ul class="list-support">
+            <li class="list-status check"><strong>Formato de Archivo:</strong> Debe subir un archivo en formato <strong>.CSV</strong>.</li>
+            <li class="list-status check"><strong>Preparación de Datos:</strong> Antes de procesar, verifique que la información esté completa y sin errores evidentes.</li>
+            <li class="list-status info"><strong>Costo del Servicio:</strong> El servicio de análisis avanzado tiene un costo mensual de <strong>$10</strong>.</li>
+            <li class="list-status warning"><strong>Validación:</strong> Asegúrese de que sus archivos sean válidos y compatibles. Si ocurre un error de procesamiento, podrá volver a subir el archivo sin costo adicional.</li>
+        </ul>
+    </div>
+
+    <div class="feature-card disclaimer-card">
+        <h3>Estado y Desarrollo</h3>
+        <p class="text-warning">Esta plataforma es un proyecto académico en desarrollo continuo. Las funcionalidades de pago, validación automática avanzada y el soporte técnico en tiempo real se encuentran en proceso de implementación.</p>
+    </div>
+</section>
+
+<!-- Sección de Contacto -->
+<section class="contact-section">
+    <h3 style="text-align: center; margin-bottom: 2.5rem;">Contacto Directo</h3>
+    <div class="contact-grid">
+        <div class="contact-item feature-card">
+            <h4>Correo de Soporte</h4>
+            <p class="contact-detail">Envíanos un email con su consulta y adjuntos si es necesario. Respondemos en un plazo de 24 horas laborables.</p>
+            <a href="mailto:soporte@databridge.espol.edu.ec" class="btn btn-primary-outline">Escribir a Soporte</a>
+        </div>
+        <div class="contact-item feature-card">
+            <h4>Consulta Académica</h4>
+            <p class="contact-detail">Canal directo para preguntas relacionadas con el desarrollo del proyecto ESPOL.</p>
+            <a href="mailto:developers@databridge.espol.edu.ec" class="btn btn-primary-outline">Contactar al Equipo</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
